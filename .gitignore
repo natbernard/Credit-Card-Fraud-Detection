@@ -1,1 +1,4 @@
 *.csv
+- SMOTE (Synthetic Minority Oversampling Technique) is an oversampling technique that involves creating new minority class synthetic samples.
+- Instead of simply duplicating examples in the minority class that don't add new information to the model as in simple oversampling, SMOTE synthesizes new examples from existing examples.
+- In SMOTE, a random example from the minority class is first chosen. *k* of its nearest neighbors are then found. A randomly selected neighbor is chosen and a synthetiv example is created at a randomly selected point between the two examples in feature space.

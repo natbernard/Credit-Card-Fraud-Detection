@@ -2,3 +2,25 @@
 - SMOTE (Synthetic Minority Oversampling Technique) is an oversampling technique that involves creating new minority class synthetic samples.
 - Instead of simply duplicating examples in the minority class that don't add new information to the model as in simple oversampling, SMOTE synthesizes new examples from existing examples.
 - In SMOTE, a random example from the minority class is first chosen. *k* of its nearest neighbors are then found. A randomly selected neighbor is chosen and a synthetiv example is created at a randomly selected point between the two examples in feature space.
+
+# params = {
+#     'n_estimators': [5, 15, 25, 50, 100],
+#     'max_depth': [3, 5, 7, 9, 11],
+#     'learning_rate': [0.01, 0.05, 0.1]
+# }
+
+# model = xgb.XGBClassifier()
+# xgb_cv = GridSearchCV(model, param_grid = params, scoring = 'f1', cv = 5)
+# xgb_cv.fit(X_train_os, y_train_os)
+# print(xgb_cv.best_params_) 
+
+# params = {
+#     'C': [0.001, 0.01, 0.1, 1],
+#     'kernel': ['linear', 'poly', 'rbf', 'sigmoid'],
+#     'gamma': ['scale', 'auto']
+# }
+
+# model = SVC()
+# svc_cv = RandomizedSearchCV(model, param_distributions = params, scoring = 'f1', cv = 5)
+# svc_cv.fit(X_train_os, y_train_os)
+# print(svc_cv.best_params_) 
